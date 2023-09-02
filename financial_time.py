@@ -52,8 +52,7 @@ class FinancialTime(scrapy.Spider):
 
             # Description
             try:
-                description = each_div.xpath('.//a[@data-trackable="standfirst-link"]').xpath(
-                    'string()').extract_first()
+                description = each_div.xpath('.//a[@data-trackable="standfirst-link"]').xpath('string()').extract_first()
             except AttributeError:
                 description = None
 
